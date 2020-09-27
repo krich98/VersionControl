@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,6 +16,9 @@ namespace UserMaintenance
         public Form1()
         {
             InitializeComponent();
+            label1.Text = Resource1.LastName;
+            label2.Text = Resource1.FirstName;
+            button1.Text = Resource1.Add;
         }
     }
 }
