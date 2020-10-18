@@ -28,13 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.dataGridViewArfomlyamLista = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewArfomlyamLista)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // dataGridViewArfomlyamLista
+            // 
+            this.dataGridViewArfomlyamLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewArfomlyamLista.Location = new System.Drawing.Point(58, 39);
+            this.dataGridViewArfomlyamLista.Name = "dataGridViewArfomlyamLista";
+            this.dataGridViewArfomlyamLista.RowHeadersWidth = 51;
+            this.dataGridViewArfomlyamLista.RowTemplate.Height = 24;
+            this.dataGridViewArfomlyamLista.Size = new System.Drawing.Size(240, 150);
+            this.dataGridViewArfomlyamLista.TabIndex = 0;
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dataGridViewArfomlyamLista);
+            this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewArfomlyamLista)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.DataGridView dataGridViewArfomlyamLista;
     }
 }
 

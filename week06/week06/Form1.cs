@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
+using week06.Entities;
 using week06.MnbServiceReference;
 
 namespace week06
@@ -16,6 +18,9 @@ namespace week06
         public Form1()
         {
             InitializeComponent();
+            Webszolgaltatashivasa();
+            BindingList<RateData> Rates = new BindingList<RateData>();
+            dataGridViewArfomlyamLista.DataSource = Rates;
         }
         public void Webszolgaltatashivasa()
         {
@@ -29,6 +34,11 @@ namespace week06
             };
             var response = mnbService.GetExchangeRates(request);
             var result = response.GetExchangeRatesResult;
+        }
+        public void XMLfeldolgozasa()
+        {
+            XmlDocument xml = new XmlDocument();
+            xml.LoadXml(result)
         }
     }
 }
