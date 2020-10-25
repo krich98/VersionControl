@@ -30,7 +30,7 @@ namespace Week07
                 
                 for (int i = 0; i < Population.Count; i++)
                 {
-                    
+                    SimStep(year, Population[i]);
                 }
 
                 int nbrOfMales = (from x in Population
