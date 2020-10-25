@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Week07.Entities;
 
-namespace Week07
+namespace Week07.Entities
 {
     public class Person
     {

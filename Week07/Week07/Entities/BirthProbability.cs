@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Week07
+namespace Week07.Entities
 {
     class BirthProbability
     {
