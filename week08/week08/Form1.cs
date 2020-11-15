@@ -16,11 +16,16 @@ namespace week08
     {
         private List<Toy> _toys = new List<Toy>();
 
-        private BallFactory _factory;
-        BallFactory Factory
+        private Toy _nextToy;
+        private IToyFactory _factory;
+        public IToyFactory Factory
         {
             get { return _factory; }
-            set { _factory = value; }
+            set
+            {
+                _factory = value;
+                DisplayNext();
+            }
         }
 
         public Form1()
@@ -54,5 +59,26 @@ namespace week08
                 _toys.Remove(oldestBall);
             }
         }
+        
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Factory = new CarFactory();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Factory = new BallFactory();
+        }
+        private void DisplayNext()
+        {
+            if (_nextToy != null)
+                Controls.Remove(_nextToy);
+            _nextToy = Factory.CreateNew();
+            _nextToy.Top = lblNext.Top + lblNext.Height + 20;
+            _nextToy.Left = lblNext.Left;
+            Controls.Add(_nextToy);
+        }
     }
+   
 }
